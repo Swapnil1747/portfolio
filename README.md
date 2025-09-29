@@ -121,7 +121,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👤 Author
 
 **Swapnil Mishra**
-- Portfolio: [Live Site](https://yourusername.github.io/portfolio/)
+- Portfolio: [Live Site](https://swapnil1747.github.io/portfolio/)
 - LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
 - Email: swapnilmishrak2230@gmail.com
 
