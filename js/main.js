@@ -191,16 +191,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize EmailJS using config
   emailjs.init(CONFIG.publicKey);
 
-  // Bootstrap Modal handling
-  const messageModalEl = document.getElementById('message-modal');
-  const modalMessage = document.getElementById('modal-message');
-  const messageModal = new bootstrap.Modal(messageModalEl);
-
-  function showModal(type, text) {
-    modalMessage.innerHTML = `<i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-triangle'} text-${type === 'success' ? 'success' : 'danger'} me-2"></i><p>${text}</p>`;
-    modalMessage.className = `text-${type === 'success' ? 'success' : 'danger'}`;
-    messageModal.show();
-  }
+  // Bootstrap Toast handling
+  const successToastEl = document.getElementById('success-toast');
+  const errorToastEl = document.getElementById('error-toast');
+  const successToast = new bootstrap.Toast(successToastEl);
+  const errorToast = new bootstrap.Toast(errorToastEl);
 
   // Contact form handling
   const contactForm = document.getElementById('contact-form');
@@ -217,18 +212,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Custom validation
       if (!name || !email || !message) {
-        showModal('error', 'Please fill in all fields.');
+        errorToast.show();
         return;
       }
 
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
-        showModal('error', 'Please enter a valid email address.');
+        errorToast.show();
         return;
       }
 
       if (message.length < 10) {
-        showModal('error', 'Message should be at least 10 characters long.');
+        errorToast.show();
         return;
       }
 
@@ -240,13 +235,13 @@ document.addEventListener("DOMContentLoaded", () => {
       emailjs.sendForm(CONFIG.serviceId, CONFIG.templateId, contactForm)
         .then((result) => {
           console.log('SUCCESS!', result.text);
-          showModal('success', 'Thank you for your message! I will get back to you soon.');
+          successToast.show();
           contactForm.reset();
           submitBtn.innerHTML = originalText;
           submitBtn.disabled = false;
         }, (error) => {
           console.log('FAILED...', error.text);
-          showModal('error', 'Failed to send the message. Please try again or contact me directly at swapnilmishrak2230@gmail.com.');
+          errorToast.show();
           submitBtn.innerHTML = originalText;
           submitBtn.disabled = false;
         });
