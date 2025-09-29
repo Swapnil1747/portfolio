@@ -1,0 +1,43 @@
+[
+  {
+    "title": "Unified Computer Vision Platform",
+    "description": "YOLOv11-powered multi-task app for object detection, segmentation, and classification.",
+    "image": "data/images/computer-vision-banner.png",
+    "demo": "https://multitasking-yolomodel-app.onrender.com/",
+    "repo": "https://github.com/Swapnil1747/Multitasking_yolomodel_app"
+  },
+  {
+    "title": "Customer Feedback Sentiment Analyzer",
+    "description": "BERT-based model for churn prediction from customer reviews.",
+    "image": "data/images/Bert.jpeg",
+    "demo": "https://huggingface.co/spaces/swapnil2230/Review_Analysis_System",
+    "repo": "https://github.com/Swapnil1747/Product_review_prediction_bert"
+  },
+  {
+    "title": "AI Personal Email Assistant",
+    "description": "Generative AI agent for managing and replying to emails intelligently.",
+    "image": "data/images/Ai_email.jpeg",
+    "repo": "https://github.com/Swapnil1747/email_assistant/tree/main"
+  },
+  {
+    "title": "Stock Market Predictor",
+    "description": "A machine learning powered web app for predicting stock market trends and prices with interactive visualizations, built using Streamlit.",
+    "image": "data/images/stock.jpg",
+    "demo": "https://stockmarketpredictor-hjkav7jmuqwlduavjcxqp5.streamlit.app/",
+    "repo": "https://github.com/Swapnil1747/Stock_Market_Predictor"
+  },
+  {
+    "title": "Telescout Chatbot",
+    "description": "An AI-powered conversational chatbot built with Streamlit, designed to assist users with queries and provide interactive responses.",
+    "image": "data/images/telescout.webp",
+    "demo": "https://telescoutchatboart.streamlit.app/",
+    "repo": "https://github.com/Swapnil1747/TeleScout_chatboart"
+  },
+  {
+    "title": "Movies Recommendation System",
+    "description": "An interactive app that recommends movies based on user inputs using machine learning / content-based filtering models.",
+    "image": "data/images/movie_recomendation.jpg",
+    "demo": "https://huggingface.co/spaces/swapnil2230/Movies_recomendation_system",
+    "repo": "https://github.com/Swapnil1747/Movies_recomendation_system"
+  }
+]
